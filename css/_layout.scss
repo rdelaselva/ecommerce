@@ -1,0 +1,272 @@
+body{
+    font-family:$fontFamily;
+    @include content(1em, 400 ,black);
+    background-color: $mainColor;
+    width: 100%;
+    margin: 0rem;
+}
+
+header{
+    width: 100%;
+    padding: 20px 50px;
+    height: 160px;
+    background-color: $headerColor;
+    @extend %flex;
+
+    i svg{
+        width: 50px;
+        cursor: pointer;
+        display: inline-block;
+    }
+    
+    svg{
+        width: 70%;
+    }
+}
+
+main{
+    .banner{
+        width: 100%;
+        padding: 5rem 0;
+        text-align: center;
+        background-image: url("../img/banner-1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color:rgb(255, 252, 252);
+        text-shadow: 0px 0px 10px #000000 ;
+        background-position-x: 55%;
+
+        h2 {
+            width: 100%;
+            font-weight: 700;
+            margin: 0rem;
+            padding: 0rem,10px;
+            font-size: clamp(1.4em, 5vw, 2em);
+        }
+
+        p {
+            font-size: 1em;
+            opacity: .9;
+        }
+    }
+
+    .products {
+        padding: 1rem 1rem;
+        @include grid(auto-fill, 25% , 5px );
+
+        article {
+            cursor: pointer;
+            text-align: left;
+            @include shadowBox(6px,rgba(0, 0, 0, 0.753));
+            border-radius: 1em;
+            display: flex;
+            flex-direction: column;
+            
+            img {
+                width: 100%;
+            }
+    
+            h3 {
+                font-size: 1em;
+                font-weight: 600;
+                padding: 1em 1em;
+                margin-bottom: .15rem;
+            }
+        
+            p {
+                padding: 1em 1em;
+                font-size: .9em ;
+                font-weight: 600 ;
+            }
+
+            button{
+                width: 40%;
+                height: 3em;
+                @include content(.5em, 900 , $headerColor);
+                align-self:self-end;
+                border-radius: .5em;
+                background-color: rgba(0, 0, 0, 0.753);
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+
+            button:active{
+                background-color: $hoverColor;
+                color: black;
+            }
+
+        }
+    }
+
+    .cart {
+        width: 400px;
+        background-color: #ffffff;
+        padding: 25px;
+        box-sizing: border-box;
+        height: 100%;
+        position: fixed;
+        right: -85%;
+        top: 140px;
+        box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.30);
+
+
+        h4 {
+            width: 100%;
+            text-align: left;
+            font-size: 1em;
+            font-weight: 500;
+            box-sizing: border-box;
+        }
+
+        div {
+            border-bottom: 1px solid #000000;
+            @extend %flexcart;
+            padding: .5rem;
+
+            img {
+                width: 100px;
+                padding: 5px;
+            }
+
+            i  {
+                width: 50px;
+                padding: 20px;
+                cursor: pointer;
+            }
+
+            p{
+                padding: 20px;
+                font-size: .3em ;
+                font-weight: 300; 
+
+                &.price{
+                    font-size: .7em ;
+                    font-weight: 400;
+                }
+            }
+            
+        }
+    }
+}
+
+footer{
+    padding: 0rem 1rem;
+    width: 100%;
+    @extend %flex;
+    background-color: $headerColor;
+
+    .logo-1{
+        width: 20%; 
+   }
+
+    nav {
+        @extend %flex;
+        background-color:$headerColor;
+        
+        a{
+            font-family:$fontFamily;
+            text-decoration: none;
+            @include content(15px, 600, rgb(3, 2, 2));
+
+        }
+    }
+}
+
+
+@media screen and (max-width:50em) {
+    header {
+
+        i svg{
+            width: 40px;
+        }
+    }
+
+    main{
+        .banner{
+            p {
+                font-size: .8em;
+                padding: 0rem 1.4rem;
+            }
+        } 
+    
+        .products {
+            @include grid(auto-fill, 45% , 10px );
+            align-content: stretch;
+
+            article{
+
+                h3, p{
+                    font-size: .9em;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:27em){
+
+    header {
+        height: 100px;
+
+        i svg {
+            width: 35px;
+        }
+    }
+
+    main{
+        .products{
+            @include grid(auto-fill, 100% , 5px );
+
+            article{
+
+                h3, p{
+                    padding: .5em 1em;
+                    font-size: 1em;
+                }
+            }
+        }
+
+        .cart{
+            width: 100%;
+            right: -100%;
+    
+            h4{
+                width: 100%;
+                font-size: 1em;
+                font-weight: 700;
+            } 
+    
+            img{
+                width: 150px;
+                padding: .5rem;
+            }
+    
+            div {
+                i {
+                    width: 60px;
+                }
+
+                p{
+                    font-size: .5em;
+
+                    &.price{
+                        font-size: .8em;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (hover: hover){
+    main{
+        .products{
+            article:hover{
+                background-color:$hoverColor;
+            }
+        }
+    }
+
+}
