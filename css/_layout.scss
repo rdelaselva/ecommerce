@@ -53,6 +53,12 @@ main{
     .products {
         padding: 1rem 1rem;
         @include grid(auto-fill, 25% , 5px );
+        @include tablet{
+            @include grid(auto-fill, 45% , 10px );
+        }
+        @include phone{
+            @include grid(auto-fill, 100% , 10px );
+        }
 
         article {
             cursor: pointer;
@@ -81,7 +87,7 @@ main{
 
             button{
                 width: 40%;
-                height: 3em;
+                height: 4em;
                 @include content(.7em, 900 , $headerColor);
                 align-self:self-end;
                 border-radius: .5em;
