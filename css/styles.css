@@ -167,66 +167,6 @@ footer nav a {
   color: rgb(3, 2, 2);
 }
 
-@media screen and (max-width: 50em) {
-  header i svg {
-    width: 40px;
-  }
-  main .banner p {
-    font-size: 0.8em;
-    padding: 0rem 1.4rem;
-  }
-  main .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
-    box-sizing: border-box;
-    gap: 10px;
-    align-content: stretch;
-  }
-  main .products article h3, main .products article p {
-    font-size: 0.9em;
-    font-weight: 600;
-  }
-}
-@media screen and (max-width: 27em) {
-  header {
-    height: 100px;
-  }
-  header i svg {
-    width: 35px;
-  }
-  main .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-    box-sizing: border-box;
-    gap: 5px;
-  }
-  main .products article h3, main .products article p {
-    padding: 0.5em 1em;
-    font-size: 1em;
-  }
-  main .cart {
-    width: 100%;
-    right: -100%;
-  }
-  main .cart h4 {
-    width: 100%;
-    font-size: 1em;
-    font-weight: 700;
-  }
-  main .cart img {
-    width: 150px;
-    padding: 0.5rem;
-  }
-  main .cart div i {
-    width: 60px;
-  }
-  main .cart div p {
-    font-size: 0.5em;
-  }
-  main .cart div p.price {
-    font-size: 0.8em;
-  }
-}
 @media (hover: hover) {
   main .products article:hover {
     background-color: #eddfeb;
