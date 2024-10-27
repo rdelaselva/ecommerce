@@ -1,0 +1,234 @@
+footer nav, footer, header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+main .cart div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: black;
+  background-color: rgb(242, 242, 242);
+  width: 100%;
+  margin: 0rem;
+}
+
+header {
+  width: 100%;
+  padding: 20px 50px;
+  height: 160px;
+  background-color: white;
+}
+header i svg {
+  width: 50px;
+  cursor: pointer;
+  display: inline-block;
+}
+header svg {
+  width: 70%;
+}
+
+main .banner {
+  width: 100%;
+  padding: 5rem 0;
+  text-align: center;
+  background-image: url("../img/banner-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 252, 252);
+  text-shadow: 0px 0px 10px #000000;
+  background-position-x: 55%;
+}
+main .banner h2 {
+  width: 100%;
+  font-weight: 700;
+  margin: 0rem;
+  padding: 0rem, 10px;
+  font-size: clamp(1.4em, 5vw, 2em);
+}
+main .banner p {
+  font-size: 1em;
+  opacity: 0.9;
+}
+main .products {
+  padding: 1rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  box-sizing: border-box;
+  gap: 5px;
+}
+main .products article {
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.753);
+  opacity: 1;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+}
+main .products article img {
+  width: 100%;
+}
+main .products article h3 {
+  font-size: 1em;
+  font-weight: 600;
+  padding: 1em 1em;
+  margin-bottom: 0.15rem;
+}
+main .products article p {
+  padding: 1em 1em;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+main .products article button {
+  width: 40%;
+  height: 3em;
+  font-size: 0.5em;
+  font-weight: 900;
+  color: white;
+  align-self: self-end;
+  border-radius: 0.5em;
+  background-color: rgba(0, 0, 0, 0.753);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+main .products article button:active {
+  background-color: #eddfeb;
+  color: black;
+}
+main .cart {
+  width: 400px;
+  background-color: #ffffff;
+  padding: 25px;
+  box-sizing: border-box;
+  height: 100%;
+  position: fixed;
+  right: -85%;
+  top: 140px;
+  box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
+}
+main .cart h4 {
+  width: 100%;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+main .cart div {
+  border-bottom: 1px solid #000000;
+  padding: 0.5rem;
+}
+main .cart div img {
+  width: 100px;
+  padding: 5px;
+}
+main .cart div i {
+  width: 50px;
+  padding: 20px;
+  cursor: pointer;
+}
+main .cart div p {
+  padding: 20px;
+  font-size: 0.3em;
+  font-weight: 300;
+}
+main .cart div p.price {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+footer {
+  padding: 0rem 1rem;
+  width: 100%;
+  background-color: white;
+}
+footer .logo-1 {
+  width: 20%;
+}
+footer nav {
+  background-color: white;
+}
+footer nav a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(3, 2, 2);
+}
+
+@media screen and (max-width: 50em) {
+  header i svg {
+    width: 40px;
+  }
+  main .banner p {
+    font-size: 0.8em;
+    padding: 0rem 1.4rem;
+  }
+  main .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    box-sizing: border-box;
+    gap: 10px;
+    align-content: stretch;
+  }
+  main .products article h3, main .products article p {
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 27em) {
+  header {
+    height: 100px;
+  }
+  header i svg {
+    width: 35px;
+  }
+  main .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    box-sizing: border-box;
+    gap: 5px;
+  }
+  main .products article h3, main .products article p {
+    padding: 0.5em 1em;
+    font-size: 1em;
+  }
+  main .cart {
+    width: 100%;
+    right: -100%;
+  }
+  main .cart h4 {
+    width: 100%;
+    font-size: 1em;
+    font-weight: 700;
+  }
+  main .cart img {
+    width: 150px;
+    padding: 0.5rem;
+  }
+  main .cart div i {
+    width: 60px;
+  }
+  main .cart div p {
+    font-size: 0.5em;
+  }
+  main .cart div p.price {
+    font-size: 0.8em;
+  }
+}
+@media (hover: hover) {
+  main .products article:hover {
+    background-color: #eddfeb;
+  }
+}/*# sourceMappingURL=styles.css.map */
