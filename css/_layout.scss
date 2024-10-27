@@ -14,9 +14,12 @@ header{
     @extend %flex;
 
     i svg{
-        width: 50px;
+        width: 80px;
         cursor: pointer;
         display: inline-block;
+        @include tablet{
+            width: 50px;
+        }
     }
     
     svg{

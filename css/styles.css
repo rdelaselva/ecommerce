@@ -31,9 +31,14 @@ header {
   background-color: white;
 }
 header i svg {
-  width: 50px;
+  width: 80px;
   cursor: pointer;
   display: inline-block;
+}
+@media screen and (max-width: 65em) {
+  header i svg {
+    width: 50px;
+  }
 }
 header svg {
   width: 70%;
