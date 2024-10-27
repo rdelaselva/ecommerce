@@ -82,12 +82,15 @@ main{
             button{
                 width: 40%;
                 height: 3em;
-                @include content(.5em, 900 , $headerColor);
+                @include content(.7em, 900 , $headerColor);
                 align-self:self-end;
                 border-radius: .5em;
                 background-color: rgba(0, 0, 0, 0.753);
                 box-sizing: border-box;
                 cursor: pointer;
+                @include tablet {
+                    height: 3em;
+                }
             }
 
             button:active{

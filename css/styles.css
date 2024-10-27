@@ -94,7 +94,7 @@ main .products article p {
 main .products article button {
   width: 40%;
   height: 3em;
-  font-size: 0.5em;
+  font-size: 0.7em;
   font-weight: 900;
   color: white;
   align-self: self-end;
@@ -102,6 +102,11 @@ main .products article button {
   background-color: rgba(0, 0, 0, 0.753);
   box-sizing: border-box;
   cursor: pointer;
+}
+@media screen and (max-width: 65em) {
+  main .products article button {
+    height: 3em;
+  }
 }
 main .products article button:active {
   background-color: #eddfeb;
